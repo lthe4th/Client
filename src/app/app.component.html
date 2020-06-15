@@ -1,1 +1,67 @@
-<app-board></app-board>
+<nz-layout class="container">
+    <nz-sider nzCollapsible [(nzCollapsed)]="isSidebarCollapsed" class="sidebar" [nzTrigger]=null [nzWidth]="240">
+        <nz-header>
+            ADMIN PANEL
+        </nz-header>
+        <div class="user-section w-100" nz-button nzNoAnimation>
+            <img src="../assets/ryu-avatar.jpg" alt="">
+            <p nz-col [nzSpan]="16">Ryuunosuke akasaka</p>
+        </div>
+        <div class="searchbar">
+            <nz-input-group nzSearch nzSize="default" [nzAddOnAfter]="suffixButton">
+                <input type="text" nz-input placeholder="search..." />
+            </nz-input-group>
+            <ng-template #suffixButton>
+                <button nz-button nzSearch><i nz-icon nzType="search" nzTheme="outline"></i></button>
+            </ng-template>
+        </div>
+        <div class="w-100 main-nav">Main navigation</div>
+        <div class="navigation">
+            <ul nz-menu nzMode="inline">
+                <!-- ONE TAB OF NAVIGATION -->
+                <li nz-submenu nzTitle="Navigation One" nzIcon="mail" >
+                    <ul>
+                        <li nz-menu-item>SubMenu Item 1</li>
+                        <li nz-menu-item>SubMenu Item 2</li>
+                    </ul>
+                </li>
+                <li nz-submenu nzTitle="Navigation Two" nzIcon="mail" >
+                    <ul>
+                        <li nz-menu-item>SubMenu Item 1</li>
+                        <li nz-menu-item>SubMenu Item 2</li>
+                    </ul>
+                </li>
+                
+            </ul>
+            
+        </div>
+    </nz-sider>
+    <nz-layout>
+        <nz-header class="header">
+            <!-- CONTROL BUTTON -->
+            <div class="info-bar h-100">
+                <button nz-button class="info-btn h-100" nzNoAnimation>
+                    <nz-badge [nzCount]="5" [nzStyle]="{ backgroundColor: '#59f444'}">
+                        <i nz-icon nzType="mail" nzTheme="outline"></i>
+                    </nz-badge>
+                </button>
+                <button nz-button class="info-btn h-100" nzNoAnimation>
+                    <nz-badge [nzCount]="5" [nzStyle]="{ backgroundColor: '#ff7200'}">
+                        <i nz-icon nzType="bell" nzTheme="outline"></i>
+                    </nz-badge>
+                </button>
+                <button nz-button class="info-btn h-100" nzNoAnimation>
+                    <nz-badge [nzCount]="5" [nzStyle]="{ backgroundColor: '#ff0000'}">
+                        <i nz-icon nzType="flag" nzTheme="outline"></i>
+                    </nz-badge>
+                </button>
+                <button nz-button class="info-btn h-100" nzNoAnimation>
+                    <i nz-icon nzType="logout" nzTheme="outline"></i>
+                    <span>Log out</span>
+                </button>
+            </div>
+
+        </nz-header>
+        <nz-content class="content"></nz-content>
+    </nz-layout>
+</nz-layout>

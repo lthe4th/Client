@@ -1,43 +1,30 @@
-import { DragScrollModule } from 'ngx-drag-scroll';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { MaterialModule } from './material/material.module'
-import { FormsModule } from '@angular/forms'
-import { HttpClientModule } from '@angular/common/http'
+import { NgModule } from '@angular/core'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BoardComponent } from './board/board.component';
-import { TodoComponent } from './todo/todo.component';
-import { TodoDetailComponent } from './todo-detail/todo-detail.component';
-import { CheckListComponent } from './check-list/check-list.component';
-import { NewTodoComponent } from './new-todo/new-todo.component';
-import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+
+registerLocaleData(en);
+
 @NgModule({
   declarations: [
-    AppComponent,
-    BoardComponent,
-    TodoComponent,
-    TodoDetailComponent,
-    CheckListComponent,
-    NewTodoComponent,
-    ConfirmDialogComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    MaterialModule,
-    HttpClientModule,
+    NgZorroAntdModule,
     FormsModule,
-    DragScrollModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
-  entryComponents: [
-    TodoDetailComponent,
-    ConfirmDialogComponent
-  ],
-  providers: [],
+  providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
