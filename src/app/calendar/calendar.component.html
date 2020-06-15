@@ -1,0 +1,28 @@
+<div class="container" nz-row>
+    <div class="addwork" nz-col nzSpan="6">
+        <h1>Add schedule</h1>
+        <div>
+            <input nz-input placeholder="Schedule Input"  (keydown.enter)="AddSchedule(scheduleinput.value)" #scheduleinput />
+            <div class="row">
+                <nz-date-picker [(ngModel)]="scheduleDatePicker"></nz-date-picker>
+                <button nz-button (click)="AddSchedule(scheduleinput.value)"><i nz-icon nzType="plus" nzTheme="outline" ></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="calendar" nz-col nzSpan="16">
+        <nz-alert nzMessage="Today is: {{ today | date: 'dd-MM-yyyy' }}"></nz-alert>
+        <nz-calendar [nzDateCell]="dateCellTpl">
+            <div *nzDateCell>Foo</div>
+        </nz-calendar>
+        <ng-template #dateCellTpl let-date><span>
+                <div *ngFor="let item of items">
+                    <div *ngIf="item.date.getDate() === date.getDate()">
+                        <p *ngFor="let messages of item.message">
+                            <nz-badge nzStatus="warning"></nz-badge>
+                            {{messages}}
+                        </p>
+                    </div>
+                </div>
+            </span></ng-template>
+    </div>
+</div>

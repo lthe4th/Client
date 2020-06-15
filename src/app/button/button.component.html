@@ -1,0 +1,80 @@
+<h1>Button </h1>
+<div class="container row">
+    <div class="example bg-white pre-format">
+        <h2>example</h2>
+        <div class="normal">
+            <button nz-button nzType="primary">Primary</button>
+            <button nz-button nzType="default">Default</button>
+            <button nz-button nzType="dashed">Dashed</button>
+            <a nz-button nzType="link">Link</a>
+        </div>
+        <h2>Size</h2>
+        <div>
+            <nz-radio-group [(ngModel)]="size">
+                <label nz-radio-button nzValue="large">Large</label>
+                <label nz-radio-button nzValue="default">Default</label>
+                <label nz-radio-button nzValue="small">Small</label>
+            </nz-radio-group>
+            <br />
+            <br />
+            <button nz-button [nzSize]="size" nzType="primary">Primary</button>
+            <button nz-button [nzSize]="size" nzType="default">Default</button>
+            <button nz-button [nzSize]="size" nzType="dashed">Dashed</button>
+            <a nz-button [nzSize]="size" nzType="link">Link</a>
+            <br />
+            <button nz-button nzType="primary" [nzSize]="size"><i nz-icon nzType="download"></i></button>
+            <button nz-button nzType="primary" [nzSize]="size" nzShape="circle"><i nz-icon
+                    nzType="download"></i></button>
+            <button nz-button nzType="primary" [nzSize]="size" nzShape="round"><i nz-icon
+                    nzType="download"></i></button>
+            <button nz-button nzType="primary" [nzSize]="size" nzShape="round"><i nz-icon
+                    nzType="download"></i>Download</button>
+            <button nz-button nzType="primary" [nzSize]="size"><i nz-icon nzType="download"></i>Download</button>
+            <br />
+            <nz-button-group [nzSize]="size">
+                <button nz-button nzType="primary"><i nz-icon nzType="left"></i>Backward</button>
+                <button nz-button nzType="primary">Forward<i nz-icon nzType="right"></i></button>
+            </nz-button-group>
+        </div>
+    </div>
+    <div class="dropdown pre-format">
+        <div class="bg-white  pre-format-floor">
+            <h2>You can make a drop down button list like this </h2>
+            <button nz-button nzType="primary">primary</button>
+            <button nz-button nzType="default">secondary</button>
+            <button nz-button nz-dropdown [nzDropdownMenu]="menu">Actions<i nz-icon nzType="down"></i></button>
+            <nz-dropdown-menu #menu="nzDropdownMenu">
+                <ul nz-menu>
+                    <li nz-menu-item>
+                        <a>1st item</a>
+                    </li>
+                    <li nz-menu-item>
+                        <a>2nd item</a>
+                    </li>
+                    <li nz-menu-item>
+                        <a>3rd item</a>
+                    </li>
+                </ul>
+            </nz-dropdown-menu>
+        </div>
+        <div class="bg-white  pre-format-floor">
+            <h2>and with loading animation</h2>
+            <button nz-button nzType="primary" nzLoading><i nz-icon nzType="poweroff"></i>Loading</button>
+            <button nz-button nzType="primary" nzSize="small" nzLoading>Loading</button>
+            <br />
+            <button nz-button nzType="primary" (click)="loadOne()" [nzLoading]="isLoadingOne">Click me!</button>
+            <button nz-button nzType="primary" (click)="loadTwo()" [nzLoading]="isLoadingTwo"><i nz-icon
+                    nzType="poweroff"></i>Click me!</button>
+            <br />
+            <button nz-button nzLoading nzShape="circle"></button>
+            <button nz-button nzLoading nzType="primary" nzShape="circle"></button>
+        </div>
+    </div>
+    <div class="pre-format bg-white nzBlock ">
+        <h2>Make button fit to parent width</h2>
+        <button nz-button nzType="primary" nzBlock>Primary</button>
+        <button nz-button nzType="default" nzBlock>Default</button>
+        <button nz-button nzType="dashed" nzBlock>Dashed</button>
+        <a nz-button nzType="link" nzBlock>Link</a>
+    </div>
+</div>

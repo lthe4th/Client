@@ -1,0 +1,227 @@
+<div class="container">
+    <div class="row mg-t-1r">
+        <div class="grid">
+            <h2>Grid System</h2>
+            <div nz-row>
+                <div nz-col nzSpan="12">col-12</div>
+                <div nz-col nzSpan="12">col-12</div>
+            </div>
+            <div nz-row>
+                <div nz-col nzSpan="8">col-8</div>
+                <div nz-col nzSpan="8">col-8</div>
+                <div nz-col nzSpan="8">col-8</div>
+            </div>
+            <div nz-row>
+                <div nz-col nzSpan="6">col-6</div>
+                <div nz-col nzSpan="6">col-6</div>
+                <div nz-col nzSpan="6">col-6</div>
+                <div nz-col nzSpan="6">col-6</div>
+            </div>
+            <div nz-row>
+                <div nz-col nzSpan="4">col-4</div>
+                <div nz-col nzSpan="4">col-4</div>
+                <div nz-col nzSpan="4">col-4</div>
+                <div nz-col nzSpan="4">col-4</div>
+                <div nz-col nzSpan="4">col-4</div>
+                <div nz-col nzSpan="4">col-4</div>
+
+            </div>
+        </div>
+        <div class="layout">
+            <h2>Layout Sytem</h2>
+            <nz-layout>
+                <nz-sider>Sider</nz-sider>
+                <nz-layout>
+                    <nz-header>Header</nz-header>
+                    <nz-content>Content</nz-content>
+                    <nz-footer>Footer</nz-footer>
+                </nz-layout>
+            </nz-layout>
+        </div>
+    </div>
+    <h2 class="mg-t-1r">Alert & notification</h2>
+    <div class="row mg-t-1r">
+        <div class="alert w-45 p-1r bg-white">
+            <h2>Alert</h2>
+            <nz-alert nzType="success" nzMessage="Success Tips" nzShowIcon></nz-alert>
+            <nz-alert nzType="info" nzMessage="Informational Notes" nzShowIcon></nz-alert>
+            <nz-alert nzType="warning" nzMessage="Warning" nzShowIcon></nz-alert>
+            <nz-alert nzType="error" nzMessage="Error" nzShowIcon></nz-alert>
+            <nz-alert nzType="success" nzMessage="Success Tips"
+                nzDescription="Detailed description and advices about successful copywriting." nzShowIcon>
+            </nz-alert>
+            <nz-alert nzType="info" nzMessage="Informational Notes"
+                nzDescription="Additional description and informations about copywriting." nzShowIcon>
+            </nz-alert>
+            <nz-alert nzType="warning" nzMessage="Warning" nzDescription="This is a warning notice about copywriting."
+                nzShowIcon> </nz-alert>
+            <nz-alert nzType="error" nzMessage="Error" nzDescription="This is an error message about copywriting."
+                nzShowIcon> </nz-alert>
+        </div>
+        <div class="w-45 p-1r bg-white" style="margin-left: 3%;">
+            <div class="notification ">
+                <h2>Notification</h2>
+                <button nz-button (click)="createNotification('success')">Success</button>
+                <button nz-button (click)="createNotification('info')">Info</button>
+                <button nz-button (click)="createNotification('warning')">Warning</button>
+                <button nz-button (click)="createNotification('error')">Error</button>
+            </div>
+            <nz-divider></nz-divider>
+            <div class="messages">
+                <h2>Messages</h2>
+                <button nz-button (click)="createMessage('success')">Success</button>
+                <button nz-button (click)="createMessage('error')">Error</button>
+                <button nz-button (click)="createMessage('warning')">Warning</button>
+            </div>
+            <nz-divider></nz-divider>
+            <div class="popconfirm">
+                <h2>Pop Confirm</h2>
+                <div style="margin-left: 60px">
+                    <button nz-popconfirm nzPopconfirmTitle="Are you sure delete this task?" (nzOnConfirm)="confirm()"
+                        (nzOnCancel)="cancel()" nzPopconfirmPlacement="topLeft" nz-button>
+                        TL
+                    </button>
+                    <button nz-popconfirm nzPopconfirmTitle="Are you sure delete this task?" (nzOnConfirm)="confirm()"
+                        (nzOnCancel)="cancel()" nzPopconfirmPlacement="top" nz-button>
+                        Top
+                    </button>
+                    <button nz-popconfirm nzPopconfirmTitle="Are you sure delete this task?" (nzOnConfirm)="confirm()"
+                        (nzOnCancel)="cancel()" nzPopconfirmPlacement="topRight" nz-button>
+                        TR
+                    </button>
+                </div>
+                <div style="width: 60px; float: left;">
+                    <button nz-popconfirm nzPopconfirmTitle="Are you sure delete this task?" (nzOnConfirm)="confirm()"
+                        (nzOnCancel)="cancel()" nzPopconfirmPlacement="leftTop" nz-button>
+                        LT
+                    </button>
+                    <button nz-popconfirm nzPopconfirmTitle="Are you sure delete this task?" (nzOnConfirm)="confirm()"
+                        (nzOnCancel)="cancel()" nzPopconfirmPlacement="left" nz-button>
+                        Left
+                    </button>
+                    <button nz-popconfirm nzPopconfirmTitle="Are you sure delete this task?" (nzOnConfirm)="confirm()"
+                        (nzOnCancel)="cancel()" nzPopconfirmPlacement="leftBottom" nz-button>
+                        LB
+                    </button>
+                </div>
+                <div style="width: 60px; margin-left: 252px;">
+                    <button nz-popconfirm nzPopconfirmTitle="Are you sure delete this task?" (nzOnConfirm)="confirm()"
+                        (nzOnCancel)="cancel()" nzPopconfirmPlacement="rightTop" nz-button>
+                        RT
+                    </button>
+                    <button nz-popconfirm nzPopconfirmTitle="Are you sure delete this task?" (nzOnConfirm)="confirm()"
+                        (nzOnCancel)="cancel()" nzPopconfirmPlacement="right" nz-button>
+                        Right
+                    </button>
+                    <button nz-popconfirm nzPopconfirmTitle="Are you sure delete this task?" (nzOnConfirm)="confirm()"
+                        (nzOnCancel)="cancel()" nzPopconfirmPlacement="rightBottom" nz-button>
+                        RB
+                    </button>
+                </div>
+                <div style="margin-left: 60px; clear: both;">
+                    <button nz-popconfirm nzPopconfirmTitle="Are you sure delete this task?" (nzOnConfirm)="confirm()"
+                        (nzOnCancel)="cancel()" nzPopconfirmPlacement="bottomLeft" nz-button>
+                        BL
+                    </button>
+                    <button nz-popconfirm nzPopconfirmTitle="Are you sure delete this task?" (nzOnConfirm)="confirm()"
+                        (nzOnCancel)="cancel()" nzPopconfirmPlacement="bottom" nz-button>
+                        Bottom
+                    </button>
+                    <button nz-popconfirm nzPopconfirmTitle="Are you sure delete this task?" (nzOnConfirm)="confirm()"
+                        (nzOnCancel)="cancel()" nzPopconfirmPlacement="bottomRight" nz-button>
+                        BR
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="w-45 p-1r bg-white" style="margin-top: 1rem;">
+            <div class="skeleton" style="height: 900px !important">
+                <h2>Skeleton Loading</h2>
+                <nz-skeleton></nz-skeleton>
+                <h4>with avatar</h4>
+                <nz-skeleton [nzAvatar]="true" [nzParagraph]="{ rows: 4 }"></nz-skeleton>
+                <h4>Want loading animation ?</h4>
+                <nz-skeleton [nzAvatar]="true" [nzParagraph]="{ rows: 4 }" [nzActive]="true"></nz-skeleton>
+            </div>
+        </div>
+        <div class="w-45 p-1r bg-white" style="margin-top: 1rem; margin-left: 3%;">
+            <div class="progress">
+                <h2>progress</h2>
+                <nz-progress [nzPercent]="30"></nz-progress>
+                <nz-progress [nzPercent]="50" nzStatus="active"></nz-progress>
+                <nz-progress [nzPercent]="70" nzStatus="exception"></nz-progress>
+                <nz-progress [nzPercent]="100"></nz-progress>
+                <nz-progress [nzPercent]="50" [nzShowInfo]="false"></nz-progress>
+                <nz-divider></nz-divider>
+                <h4>smaller</h4>
+                <div style="width: 300px;">
+                    <nz-progress [nzPercent]="30" nzSize="small"></nz-progress>
+                    <nz-progress [nzPercent]="50" nzSize="small" nzStatus="active"></nz-progress>
+                    <nz-progress [nzPercent]="70" nzSize="small" nzStatus="exception"></nz-progress>
+                    <nz-progress [nzPercent]="100" nzSize="small"></nz-progress>
+                    <nz-progress [nzPercent]="50" nzSize="small" [nzShowInfo]="false"></nz-progress>
+                </div>
+                <nz-divider></nz-divider>
+                <h4>Circle shape</h4>
+                <nz-progress [nzPercent]="75" nzType="circle"></nz-progress>
+                <nz-progress [nzPercent]="70" nzType="circle" nzStatus="exception"></nz-progress>
+                <nz-progress [nzPercent]="100" nzType="circle"></nz-progress>
+                <nz-divider></nz-divider>
+                <div class="row">
+                    <div>
+                        <h4>smaller circle shape</h4>
+                        <nz-progress [nzPercent]="75" nzType="circle" [nzWidth]="80"></nz-progress>
+                        <nz-progress [nzPercent]="70" nzType="circle" [nzWidth]="80" nzStatus="exception"></nz-progress>
+                        <nz-progress [nzPercent]="100" nzType="circle" [nzWidth]="80"></nz-progress>
+                    </div>
+
+                </div>
+                <div>
+                    <nz-divider></nz-divider>
+                    <div class="row">
+                        <div>
+                            <h4>other ways to display</h4>
+                            <div style="width: 200px;">
+                                <nz-progress nz-tooltip nzTitle="3 done / 3 in progress / 4 to do" [nzPercent]="60"
+                                    [nzSuccessPercent]="30" nzSize="small"></nz-progress>
+                            </div>
+                            <br>
+                            <nz-progress nz-tooltip nzTitle="3 done / 3 in progress / 4 to do" nzType="circle"
+                                [nzPercent]="60" [nzSuccessPercent]="30" [nzWidth]="80"></nz-progress>
+                            <nz-progress nz-tooltip nzTitle="3 done / 3 in progress / 4 to do" nzType="dashboard"
+                                [nzPercent]="60" [nzSuccessPercent]="30" [nzWidth]="80"></nz-progress>
+                        </div>
+                        <div style="margin-left: 100px;">
+                            <h4>or you can go with gradient</h4>
+                            <nz-progress [nzPercent]="99.9" [nzStrokeColor]="{ '0%': '#108ee9', '100%': '#87d068' }">
+                            </nz-progress>
+                            <br>
+                            <nz-progress nzType="circle" [nzPercent]="90"
+                                [nzStrokeColor]="{ '0%': '#108ee9', '50%': '#2db7f5', '100%': '#87d068' }"
+                                [nzWidth]="80">
+                            </nz-progress>
+                            <nz-progress nzType="dashboard" [nzPercent]="100"
+                                [nzStrokeColor]="{ '0%': '#108ee9', '100%': '#87d068' }" [nzWidth]="80"></nz-progress>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carousel w-45 p-1r bg-white" style="margin-top: 1rem; margin-left: 3%;">
+        <h2>Carousel</h2>
+        <nz-radio-group [(ngModel)]="dotPosition">
+            <label nz-radio-button nzValue="bottom">Bottom</label>
+            <label nz-radio-button nzValue="top">Top</label>
+            <label nz-radio-button nzValue="left">Left</label>
+            <label nz-radio-button nzValue="right">Right</label>
+        </nz-radio-group>
+        <nz-carousel nzAutoPlay [nzDotPosition]="dotPosition">
+            <div nz-carousel-content *ngFor="let index of array">
+                <h3>{{ index }}</h3>
+            </div>
+        </nz-carousel>
+    </div>
+</div>

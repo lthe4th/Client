@@ -1,0 +1,38 @@
+.bg-white{
+    background-color: white;
+}
+
+.pre-format{
+    width: 45%;
+    padding: 1rem;
+    margin: 1.5%;
+}
+.pre-format-floor{
+    padding: 1rem;
+    margin: 1.5%;
+}
+h1{
+    margin: 1rem 2rem 0 2rem;
+}
+.container{
+    padding: 1rem;
+    .example{
+        [nz-button] {
+            margin-right: 8px;
+            margin-bottom: 12px;
+          }
+    }
+    .dropdown{
+        height: max-content;
+        [nz-button] {
+            margin-right: 8px;
+            margin-bottom: 12px;
+          }
+    }
+    .nzBlock{
+        [nz-button] {
+            margin-bottom: 12px;
+          }
+    }
+
+}

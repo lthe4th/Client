@@ -22,5 +22,38 @@
 }
 
 .ant-menu-submenu-inline>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after, .ant-menu-submenu-inline>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow::before, .ant-menu-submenu-vertical-left>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after, .ant-menu-submenu-vertical-left>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow::before, .ant-menu-submenu-vertical-right>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after, .ant-menu-submenu-vertical-right>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow::before, .ant-menu-submenu-vertical>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after, .ant-menu-submenu-vertical>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow::before{
-    background: white !important;
+    background: white ;
+}
+
+.ant-menu-horizontal>.ant-menu-item-active, .ant-menu-horizontal>.ant-menu-item:hover, .ant-menu-horizontal>.ant-menu-submenu .ant-menu-submenu-title:hover{
+    background-color:white;
+    i{
+        color: black;
+    }
+}
+.ant-popover-inner-content{
+    max-height: 600px;
+    overflow-y: scroll;
+    p{
+        width: 300px;
+    }
+}
+.ant-popover-inner-content::-webkit-scrollbar{
+display: none;    
+}
+
+.dashboard_a.ant-menu-item.ant-menu-item-selected{
+    color: white !important;
+    background-color: #1A2226 !important;
+}
+
+.menu-item.ant-menu-item.ant-menu-item-selected{
+    a{
+        color: white !important;
+    }
+    background-color: #1A2226 !important;
+}
+
+.row{
+    display: flex;
 }

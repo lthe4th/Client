@@ -15,53 +15,153 @@
                 <button nz-button nzSearch><i nz-icon nzType="search" nzTheme="outline"></i></button>
             </ng-template>
         </div>
-        <div class="w-100 main-nav">Main navigation</div>
+        <!-- <ul nz-menu nzMode="inline" class="w-100 navigation_a">
+            <a nz-menu-item nz-tooltip nzTooltipPlacement="right" routerLink="/dashboard">
+                <i nz-icon nzType="dashboard"></i>
+                <span>DashBoard</span>
+            </a>
+        </ul> -->
         <div class="navigation">
             <ul nz-menu nzMode="inline">
+                <a nz-menu-item nz-tooltip nzTooltipPlacement="right" routerLink="/dashboard" class="dashboard_a">
+                    <i nz-icon nzType="dashboard"></i>
+                    <span>DashBoard</span>
+                </a>
+                <div class="w-100 main-nav">Main navigation</div>
                 <!-- ONE TAB OF NAVIGATION -->
-                <li nz-submenu nzTitle="Navigation One" nzIcon="mail" >
+                <li nz-submenu nzTitle="UI Element" nzIcon="laptop">
                     <ul>
-                        <li nz-menu-item>SubMenu Item 1</li>
-                        <li nz-menu-item>SubMenu Item 2</li>
+                        <li nz-menu-item class="menu-item"><a routerLink="/general"><i nz-icon nzType="right-circle"
+                                    nzTheme="outline"></i>General</a></li>
+                        <li nz-menu-item class="menu-item"><a routerLink="/button"><i nz-icon nzType="right-circle"
+                                    nzTheme="outline"></i>Button</a></li>
+                        <li nz-menu-item class="menu-item"><a routerLink="/icon"><i nz-icon nzType="right-circle"
+                                    nzTheme="outline"></i>Icon</a></li>
+                        <li nz-menu-item class="menu-item"><a routerLink="/slider"><i nz-icon nzType="right-circle"
+                                    nzTheme="outline"></i>Slider</a></li>
+                        <li nz-menu-item class="menu-item"><a routerLink="/modal"><i nz-icon nzType="right-circle"
+                                    nzTheme="outline"></i>Modal</a></li>
+                        <li nz-menu-item class="menu-item"><a routerLink="/drawer"><i nz-icon nzType="right-circle"
+                                    nzTheme="outline"></i>Drawer</a></li>
+
                     </ul>
                 </li>
-                <li nz-submenu nzTitle="Navigation Two" nzIcon="mail" >
-                    <ul>
-                        <li nz-menu-item>SubMenu Item 1</li>
-                        <li nz-menu-item>SubMenu Item 2</li>
-                    </ul>
-                </li>
-                
+                <a nz-menu-item nz-tooltip nzTooltipPlacement="right" class="dashboard_a">
+                    <i nz-icon nzType="form"></i>
+                    <span>Forms</span>
+                </a>
+                <a nz-menu-item nz-tooltip nzTooltipPlacement="right"  class="dashboard_a">
+                    <i nz-icon nzType="table"></i>
+                    <span>Table</span>
+                </a>
+                <a nz-menu-item nz-tooltip nzTooltipPlacement="right" routerLink="/calendar" routerLinkActive class="dashboard_a">
+                    <i nz-icon nzType="calendar"></i>
+                    <span>Calendar</span>
+                </a>
             </ul>
-            
+
         </div>
+
     </nz-sider>
     <nz-layout>
         <nz-header class="header">
             <!-- CONTROL BUTTON -->
             <div class="info-bar h-100">
-                <button nz-button class="info-btn h-100" nzNoAnimation>
-                    <nz-badge [nzCount]="5" [nzStyle]="{ backgroundColor: '#59f444'}">
+                <button nz-button class="info-btn h-100" nzNoAnimation nz-popover nzPopoverTitle="you have 3 mail"
+                    nzPopoverTrigger="click" [nzPopoverContent]="mailTemplate">
+                    <nz-badge [nzCount]="3" [nzStyle]="{ backgroundColor: '#59f444'}">
                         <i nz-icon nzType="mail" nzTheme="outline"></i>
                     </nz-badge>
+                    <ng-template #mailTemplate>
+                        <div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est tempora hic suscipit
+                                impedit sunt tenetur et explicabo magni voluptatibus provident?</p>
+                            <nz-divider></nz-divider>
+                        </div>
+                        <div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est tempora hic suscipit
+                                impedit sunt tenetur et explicabo magni voluptatibus provident?</p>
+                            <nz-divider></nz-divider>
+                        </div>
+                        <div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est tempora hic suscipit
+                                impedit sunt tenetur et explicabo magni voluptatibus provident?</p>
+                            <nz-divider></nz-divider>
+                        </div>
+                    </ng-template>
                 </button>
-                <button nz-button class="info-btn h-100" nzNoAnimation>
-                    <nz-badge [nzCount]="5" [nzStyle]="{ backgroundColor: '#ff7200'}">
+                <button nz-button class="info-btn h-100" nzNoAnimation nz-popover
+                    nzPopoverTitle="you have 3 notification" nzPopoverTrigger="click" [nzPopoverContent]="bellTemplate">
+                    <nz-badge [nzCount]="3" [nzStyle]="{ backgroundColor: '#ff7200'}">
                         <i nz-icon nzType="bell" nzTheme="outline"></i>
                     </nz-badge>
+                    <ng-template #bellTemplate>
+                        <div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est tempora hic suscipit
+                                impedit sunt tenetur et explicabo magni voluptatibus provident?</p>
+                            <nz-divider></nz-divider>
+                        </div>
+                        <div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est tempora hic suscipit
+                                impedit sunt tenetur et explicabo magni voluptatibus provident?</p>
+                            <nz-divider></nz-divider>
+                        </div>
+                        <div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est tempora hic suscipit
+                                impedit sunt tenetur et explicabo magni voluptatibus provident?</p>
+                            <nz-divider></nz-divider>
+                        </div>
+                    </ng-template>
                 </button>
-                <button nz-button class="info-btn h-100" nzNoAnimation>
+                <button nz-button class="info-btn h-100" nzNoAnimation nz-popover nzPopoverTitle="you have 5 tasks"
+                    nzPopoverTrigger="click" [nzPopoverContent]="flagTemplate">
                     <nz-badge [nzCount]="5" [nzStyle]="{ backgroundColor: '#ff0000'}">
                         <i nz-icon nzType="flag" nzTheme="outline"></i>
                     </nz-badge>
+                    <ng-template #flagTemplate>
+                        <div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est tempora hic suscipit
+                                impedit sunt tenetur et explicabo magni voluptatibus provident?</p>
+                            <nz-progress [nzPercent]="40"></nz-progress>
+                            <nz-divider></nz-divider>
+                        </div>
+                        <div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est tempora hic suscipit
+                                impedit sunt tenetur et explicabo magni voluptatibus provident?</p>
+                            <nz-progress [nzPercent]="50"></nz-progress>
+                            <nz-divider></nz-divider>
+                        </div>
+                        <div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est tempora hic suscipit
+                                impedit sunt tenetur et explicabo magni voluptatibus provident?</p>
+                            <nz-progress [nzPercent]="20"></nz-progress>
+                            <nz-divider></nz-divider>
+                        </div>
+                        <div>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, aliquam.?</p>
+                            <nz-progress [nzPercent]="100"></nz-progress>
+                            <nz-divider></nz-divider>
+                        </div>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <nz-progress [nzPercent]="90"></nz-progress>
+                            <nz-divider></nz-divider>
+                        </div>
+                    </ng-template>
                 </button>
-                <button nz-button class="info-btn h-100" nzNoAnimation>
+                <button nz-button class="info-btn h-100" nzNoAnimation nz-popover nzPopoverTitle="Are you sure ?"
+                    nzPopoverTrigger="click" [nzPopoverContent]="logoutTemplate" nzPopoverPlacement="bottomRight">
                     <i nz-icon nzType="logout" nzTheme="outline"></i>
-                    <span>Log out</span>
+                    <ng-template #logoutTemplate>
+                        <button nz-button style="margin-right: 1rem;">Log out !</button>
+                        <button nz-button>Cancel</button>
+                    </ng-template>
                 </button>
             </div>
 
         </nz-header>
-        <nz-content class="content"></nz-content>
+        <nz-content class="content">
+            <router-outlet></router-outlet>
+        </nz-content>
     </nz-layout>
 </nz-layout>

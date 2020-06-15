@@ -1,0 +1,210 @@
+<div class="container">
+    <div class="general" nz-row>
+        <h2>DashBoard</h2>
+        <div class="general-info" nz-col nzSpan="6">
+            <div class="icon bg-blue"><i nz-icon nzType="area-chart" nzTheme="outline"></i></div>
+            <div class="info">
+                <p>Cpu traffic</p>
+                <h4>90%</h4>
+            </div>
+        </div>
+        <div class="general-info" nz-col nzSpan="6">
+            <div class="icon bg-red"><i nz-icon nzType="google-plus" nzTheme="outline"></i></div>
+            <div class="info">
+                <p>Likes</p>
+                <h4>41,440</h4>
+            </div>
+        </div>
+        <div class="general-info" nz-col nzSpan="6">
+            <div class="icon bg-green"><i nz-icon nzType="shopping-cart" nzTheme="outline"></i></div>
+            <div class="info">
+                <p>Sales</p>
+                <h4>760</h4>
+            </div>
+        </div>
+        <div class="general-info" nz-col nzSpan="6">
+            <div class="icon bg-yello"><i nz-icon nzType="team" nzTheme="outline"></i></div>
+            <div class="info">
+                <p>New member</p>
+                <h4>666</h4>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: white; width: 85%;" >
+        <div nzHeader="Monthly Cap Report" nzActive="true" class="mc-report">
+            <div class="container">
+                <div id="no1">
+                    <p>Goal Completion</p>
+                    <div>
+                        <div>
+                            <p>Add product to cart</p>
+                            <p><span>50</span>/100</p>
+                        </div>
+                        <nz-progress [nzPercent]="50" [nzStrokeColor]="{ '0%': '#00C0EF', '100%': '#00C0EF' }"
+                            [nzShowInfo]="false"></nz-progress>
+                    </div>
+                    <div>
+                        <div>
+                            <p>Complete Purchase</p>
+                            <p><span>50</span>/100</p>
+                        </div>
+                        <nz-progress [nzPercent]="50" [nzStrokeColor]="{ '0%': '#DD4B39', '100%': '#DD4B39' }"
+                            [nzShowInfo]="false"></nz-progress>
+                    </div>
+                    <div>
+                        <div>
+                            <p>Visit Premium Page</p>
+                            <p><span>50</span>/100</p>
+                        </div>
+                        <nz-progress [nzPercent]="50" [nzStrokeColor]="{ '0%': '#00A65A', '100%': '#00A65A' }"
+                            [nzShowInfo]="false"></nz-progress>
+                    </div>
+                    <div>
+                        <div>
+                            <p>Send Inquiries</p>
+                            <p><span>50</span>/100</p>
+                        </div>
+                        <nz-progress [nzPercent]="50" [nzStrokeColor]="{ '0%': '#F39C12', '100%': '#F39C12' }"
+                            [nzShowInfo]="false"></nz-progress>
+                    </div>
+                </div>
+                <div id="no2">
+                    <div class="floor">
+                        <div>
+                            <p class="cl-up"><i nz-icon nzType="up" nzTheme="outline"></i>17%</p>
+                            <h4>$35,210.43</h4>
+                            <p>total revenue</p>
+                        </div>
+                        <div>
+                            <p class="cl-equal"><i nz-icon nzType="left" nzTheme="outline"></i>0%</p>
+                            <h4>$10,390.90</h4>
+                            <p>total cost</p>
+                        </div>
+                    </div>
+                    <div class="floor">
+                        <div>
+                            <p class="cl-up"><i nz-icon nzType="up" nzTheme="outline"></i>20%</p>
+                            <h4>$24,813.53</h4>
+                            <p>total profit</p>
+                        </div>
+                        <div>
+                            <p class="cl-down"><i nz-icon nzType="down" nzTheme="outline"></i>18%</p>
+                            <h4>1200</h4>
+                            <p>goal completions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="chatbox">
+            <div class="header">
+                <h2>Chat box</h2>
+            </div>
+            <nz-divider></nz-divider>
+            <div class="body">
+                <div class="comment">
+                    <nz-comment nzAuthor="User 1" nzDatetime="23 Jan 2:00 pm">
+                        <nz-avatar nz-comment-avatar nzIcon="user" [nzSrc]=""></nz-avatar>
+                        <nz-comment-content>
+                            <p>Is this template really for free? That's unbelievable!</p>
+                        </nz-comment-content>
+                        <nz-comment-action>Reply to</nz-comment-action>
+                    </nz-comment>
+                    <hr>
+                </div>
+                <div class="comment">
+                    <nz-comment nzAuthor="User 2" nzDatetime="23 Jan 2:01 pm">
+                        <nz-avatar nz-comment-avatar nzIcon="user" [nzSrc]=""></nz-avatar>
+                        <nz-comment-content>
+                            <p>You better believe it!</p>
+                        </nz-comment-content>
+                        <nz-comment-action>Reply to</nz-comment-action>
+                    </nz-comment>
+                    <hr>
+                </div>
+                <div class="comment">
+                    <nz-comment nzAuthor="User 3" nzDatetime="23 Jan 3:01 pm">
+                        <nz-avatar nz-comment-avatar nzIcon="user" [nzSrc]=""></nz-avatar>
+                        <nz-comment-content>
+                            <p>Working on a great new app! Wanna join?</p>
+                        </nz-comment-content>
+                        <nz-comment-action>Reply to</nz-comment-action>
+                    </nz-comment>
+                    <hr>
+                </div>
+                <div class="comment">
+                    <nz-comment nzAuthor="Admin" nzDatetime="23 Jan 4:01 pm">
+                        <nz-avatar nz-comment-avatar nzIcon="user" [nzSrc]=""></nz-avatar>
+                        <nz-comment-content>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sapiente recusandae,
+                                asperiores, fugiat nihil consectetur eos laboriosam dolorum placeat error ullam ea velit
+                                sequi earum perferendis cupiditate qui nisi nesciunt quam illo officia a alias. Atque
+                                provident laborum modi nisi expedita eum quibusdam distinctio illum et numquam
+                                necessitatibus rem maiores molestiae mollitia eligendi blanditiis cumque nemo deserunt,
+                                suscipit, error, reprehenderit ducimus! Qui omnis ipsum fugit rerum similique magnam
+                                tempore modi amet quia tenetur, a, aperiam iste deleniti quas nihil earum laboriosam
+                                dicta? Eligendi quidem est possimus quibusdam nihil alias sapiente?</p>
+                        </nz-comment-content>
+                        <nz-comment-action>Reply to</nz-comment-action>
+                    </nz-comment>
+                    <hr>
+                </div>
+            </div>
+            <div class="input">
+                <nz-input-group [nzSuffix]="suffixTemplate">
+                    <input nz-input placeholder="input messages" />
+                </nz-input-group>
+                <ng-template #suffixTemplate>
+                    <i nz-icon style="cursor: pointer;" nzType="arrow-right" nzTheme="outline"></i>
+                </ng-template>
+            </div>
+        </div>
+        <div class="latest-member">
+            <h2>Latest Member</h2>
+            <div nz-row>
+                <div nz-col nzSpan="6">
+                    <img src="../../assets/sakurasou character/Aho-TakuSakurasounoPetnaKanojo-05720p-Hi10P4B88855Emkv_snapshot_0553_20121106_235403_zpsc3a3ae21.jpg"
+                        alt="">
+                    <a>Sorata kanda</a>
+                    <p>Today</p>
+                </div>
+                <div nz-col nzSpan="6">
+                    <img src="../../assets/sakurasou character/Chihiro_Sengoku.jpg" alt="">
+                    <a>Chihiro Sengoku</a>
+                    <p>Yesterday</p>
+                </div>
+                <div nz-col nzSpan="6">
+                    <img src="../../assets/sakurasou character/Jin_Mitaka.jpg" alt="">
+                    <a>Jin Mikata</a>
+                    <p>Today</p>
+                </div>
+                <div nz-col nzSpan="6">
+                    <img src="../../assets/sakurasou character/Mashiro_Shiina.jpg" alt="">
+                    <a>Mashiro Shiina</a>
+                    <p>Today</p>
+                </div>
+                <div nz-col nzSpan="6">
+                    <img src="../../assets/sakurasou character/MisakiKamigusa.jpg" alt="">
+                    <a>Misaki Kamigusa</a>
+                    <p>Other day</p>
+                </div>
+                <div nz-col nzSpan="6">
+                    <img src="../../assets/sakurasou character/Rita_Ainsworth.jpg" alt="">
+                    <a>Rita Ainsworth</a>
+                    <p>Today</p>
+                </div>
+                <div nz-col nzSpan="6">
+                    <img src="../../assets/sakurasou character/Nanami_Aoyama.jpg" alt="">
+                    <a>Nanami Aoyama</a>
+                    <p>Today</p>
+                </div>
+
+            </div>
+            <div style="text-align: center;">
+                <a href="#">See all members</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -38,6 +38,7 @@
             width: 90%;
             margin-left: 5%;
             margin-right: 5%;
+            margin-bottom: 1rem;
             input{
                 background: #1A2226;
                 border: none;
@@ -51,13 +52,31 @@
                 border: none;
             }
         }
+        .dashboard_a{
+                border: none;
+                background-color: #222D32;
+                text-align: left;
+                padding-left: 1.5rem;
+                color: rgb(173, 171, 171);
+                margin: 0;
+            
+        }
+       .dashboard_a:hover{
+            color: white;
+            background-color: #1A2226;
+        }
+        .dashboard_a:focus{
+            color: white;
+            background-color: #1A2226;
+        }
+
         .main-nav{
             margin-top: .5rem;
             height: 2.5rem;
             background-color: #1A2226;
             color: rgb(93, 92, 92);
-            text-align: left;
-            padding: .7rem;
+            text-align: lef;
+            padding: 1rem;
             text-transform: uppercase;
         }
         .navigation{
@@ -77,6 +96,9 @@
                         }
                         .ant-menu-item:hover{
                             color: white !important;
+                        }
+                        a{
+                            color: rgb(173, 171, 171);
                         }
                     }
                 }
@@ -105,11 +127,29 @@
                 i{
                     font-size: 20px;
                 }
+
             }
             button:last-child{
                 width: 6rem;
                 border-right: 1px solid lightgray;
             }
+            // ul{
+            //     .noti_count{
+            //             display: inline-block;
+            //             transform: translate(-30px,.5rem);
+            //             background-color: red;
+            //             width: 1rem;
+            //             height: 1rem;
+            //             border-radius: 100%;
+            //             p{
+            //                 transform: translate(.4rem,-1rem);
+            //                 color: white;
+            //                 font-size: 10px;
+            //             }
+            //         }
+            // }
+
+
         }
        
     }
@@ -131,3 +171,4 @@
 .ant-menu-item-selected{
     color: white !important;
 }
+
