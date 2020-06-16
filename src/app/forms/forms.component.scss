@@ -1,0 +1,106 @@
+.container{
+    padding: 1rem;
+    .content{
+        background: white;
+        padding: 2rem;
+    }
+    .content{
+        width: 100%;
+        position: relative;
+        .loginform{
+            .login-form {
+                max-width: 300px;
+              }
+        
+              .login-form-margin {
+                margin-bottom: 16px;
+              }
+        
+              .login-form-forgot {
+                float: right;
+              }
+        
+              .login-form-button {
+                width: 100%;
+              }
+        }
+        .loginform::after{
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            background-color: lightgray;
+            right: 20px;
+            top: 0;
+        }
+    }
+}
+
+.example-input{
+    position: relative;
+    input{
+        width: 300px;
+    }
+    
+}
+.example-input::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 275px;
+    background-color: lightgray;
+    right: 20px;
+    top: -40px;
+}
+
+.dynamic{
+    margin-left: 10px;
+    .dynamic-delete-button {
+        cursor: pointer;
+        position: relative;
+        top: 4px;
+        font-size: 24px;
+        color: #999;
+        transition: all 0.3s;
+      }
+
+      .dynamic-delete-button:hover {
+        color: #777;
+      }
+
+      .passenger-input {
+        width: 60%;
+        margin-right: 8px;
+      }
+
+      [nz-form] {
+        max-width: 600px;
+      }
+
+      .add-button {
+        width: 60%;
+      }
+}
+
+.form-thing{
+    margin-top: 2rem;
+    background-color: white;
+    padding: 2rem;
+    [nz-form] {
+        max-width: 600px;
+      }
+
+      .phone-select {
+        width: 70px;
+      }
+
+      .register-are {
+        margin-bottom: 8px;
+      }
+}
+
+.example{
+  background: white;
+  margin-top: 1rem;
+  padding: 2rem;
+}

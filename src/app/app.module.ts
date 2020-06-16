@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core'
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,10 @@ import { IconComponent } from './icon/icon.component';
 import { SliderComponent } from './slider/slider.component';
 import { ModalComponent } from './modal/modal.component';
 import { DrawerComponent } from './drawer/drawer.component';
+import { FormsComponent } from './forms/forms.component';
+import { TableComponent } from './table/table.component';
+import { FormExampleComponent } from './form-example/form-example.component';
+import { DataDisplayComponent } from './data-display/data-display.component';
 
 registerLocaleData(en);
 
@@ -30,7 +35,12 @@ registerLocaleData(en);
     IconComponent,
     SliderComponent,
     ModalComponent,
-    DrawerComponent
+    DrawerComponent,
+    FormsComponent,
+    TableComponent,
+    FormExampleComponent,
+    DataDisplayComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -38,7 +48,8 @@ registerLocaleData(en);
     NgZorroAntdModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

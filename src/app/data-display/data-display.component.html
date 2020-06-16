@@ -1,0 +1,164 @@
+<div class="container">
+    <div class="avatar">
+        <h2> avatar</h2>
+        <div>
+            <nz-avatar [nzSize]="64" nzIcon="user"></nz-avatar>
+            <nz-avatar nzSize="large" nzIcon="user"></nz-avatar>
+            <nz-avatar nzIcon="user"></nz-avatar>
+            <nz-avatar nzSize="small" nzIcon="user"></nz-avatar>
+        </div>
+        <div>
+            <nz-avatar [nzShape]="'square'" [nzSize]="64" [nzIcon]="'user'"></nz-avatar>
+            <nz-avatar [nzShape]="'square'" [nzSize]="'large'" [nzIcon]="'user'"></nz-avatar>
+            <nz-avatar [nzShape]="'square'" [nzIcon]="'user'"></nz-avatar>
+            <nz-avatar [nzShape]="'square'" [nzSize]="'small'" [nzIcon]="'user'"></nz-avatar>
+        </div>
+    </div>
+    <div class="badge">
+        <h2>Badge</h2>
+        <nz-badge [nzCount]="5">
+            <a class="head-example"></a>
+        </nz-badge>
+        <nz-badge [nzCount]="0" nzShowZero>
+            <a class="head-example"></a>
+        </nz-badge>
+        <nz-badge [nzCount]="iconTemplate">
+            <a class="head-example"></a>
+        </nz-badge>
+        <ng-template #iconTemplate>
+            <i nz-icon nzType="clock-circle" class="ant-scroll-number-custom-component" style="color: #f5222d"></i>
+        </ng-template>
+    </div>
+    <div class="card">
+        <h2>Card</h2>
+        <nz-divider></nz-divider>
+        <div class="card1">
+            <h4>Example</h4>
+            <div style="background: #ECECEC;padding:30px;">
+                <nz-card style="width:300px;" [nzBordered]="false" nzTitle="Card title" [nzExtra]="extraTemplate">
+                    <p>Card content</p>
+                    <p>Card content</p>
+                    <p>Card content</p>
+                </nz-card>
+            </div>
+            <ng-template #extraTemplate>
+                <a>More</a>
+            </ng-template>
+        </div>
+        <nz-divider></nz-divider>
+        <h4>Example</h4>
+        <div class="card2">
+            <nz-card nzHoverable style="width:240px" [nzCover]="coverTemplate">
+                <nz-card-meta nzTitle="Europe Street beat" nzDescription="www.instagram.com"></nz-card-meta>
+            </nz-card>
+            <ng-template #coverTemplate>
+                <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
+            </ng-template>
+        </div>
+    </div>
+    <div class="carousel">
+        <nz-carousel nzAutoPlay>
+            <div nz-carousel-content *ngFor="let index of array">
+                <h3>{{ index }}</h3>
+            </div>
+        </nz-carousel>
+    </div>
+</div>
+<div class="container2">
+    <div class="collapse">
+        <h2>Collapse</h2>
+        <nz-collapse>
+            <nz-collapse-panel *ngFor="let panel of panels" [nzHeader]="panel.name" [nzActive]="panel.active"
+                [nzDisabled]="panel.disabled">
+                <p style="margin:0;">
+                    A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a
+                    welcome guest in many
+                    households across the world.
+                </p>
+            </nz-collapse-panel>
+        </nz-collapse>
+    </div>
+    <div class="comment">
+        <h2>Display a comment</h2>
+        <nz-comment nzAuthor="Han Solo" [nzDatetime]="time">
+            <nz-avatar nz-comment-avatar nzIcon="user"
+                nzSrc="//zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
+            <nz-comment-content>
+                <p>
+                    We supply a series of design principles, practical patterns and high quality design resources
+                    (Sketch and Axure), to help people
+                    create their product prototypes beautifully and efficiently.
+                </p>
+            </nz-comment-content>
+            <nz-comment-action>
+                <i nz-tooltip nzTitle="Like" nz-icon nzType="like" [nzTheme]="likes > 0 ? 'twotone' : 'outline'"
+                    (click)="like()"></i>
+                <span class="count like">{{ likes }}</span>
+            </nz-comment-action>
+            <nz-comment-action>
+                <i nz-tooltip nzTitle="Dislike" nz-icon nzType="dislike"
+                    [nzTheme]="dislikes > 0 ? 'twotone' : 'outline'" (click)="dislike()"></i>
+                <span class="count dislike">{{ dislikes }}</span>
+            </nz-comment-action>
+            <nz-comment-action>Reply to</nz-comment-action>
+        </nz-comment>
+    </div>
+    <div class="Empty">
+        <h2>Display a empty placeholder</h2>
+        <nz-empty></nz-empty>
+    </div>
+</div>
+<div class="container3">
+    <div class="Tabs">
+        <h2>Tabs</h2>
+        <div class="tab1">
+            <nz-tabset [nzTabBarExtraContent]="">
+                <nz-tab *ngFor="let tab of tabs" [nzTitle]="'Tab ' + tab"> Content of tab {{ tab }} </nz-tab>
+            </nz-tabset>
+        </div>
+        <div class="tab2">
+            <nz-tabset [nzType]="'card'" [nzTabBarExtraContent]="extraTemplate">
+                <nz-tab *ngFor="let tab of tabs2" [nzTitle]="titleTemplate">
+                    <ng-template #titleTemplate>
+                        <div>
+                            {{ tab }}
+                            <i nz-icon nzType="close" (click)="closeTab(tab)" class="ant-tabs-close-x"></i>
+                        </div>
+                    </ng-template>
+                    Content of {{ tab }}
+                </nz-tab>
+            </nz-tabset>
+            <ng-template #extraTemplate>
+                <i class="ant-tabs-new-tab" nz-icon nzType="plus" (click)="newTab()"></i>
+            </ng-template>
+        </div>
+    </div>
+    <div class="timeline">
+        <h2>TimeLine</h2>
+        <nz-timeline  z-timeline>
+            <nz-timeline-item nzColor="green">Create a services site 2015-09-01</nz-timeline-item>
+            <nz-timeline-item nzColor="green">Solve initial network problems 2015-09-01</nz-timeline-item>
+            <nz-timeline-item nzColor="red">
+                <p>Solve initial network problems 1</p>
+                <p>Solve initial network problems 2</p>
+                <p>Solve initial network problems 3 2015-09-01</p>
+            </nz-timeline-item>
+            <nz-timeline-item>
+                <p>Technical testing 1</p>
+                <p>Technical testing 2</p>
+                <p>Technical testing 3 2015-09-01</p>
+            </nz-timeline-item>
+            <nz-timeline-item nzColor="gray">
+                <p>Technical testing 1</p>
+                <p>Technical testing 2</p>
+                <p>Technical testing 3 2015-09-01</p>
+            </nz-timeline-item>
+            <nz-timeline-item nzColor="gray">
+                <p>Technical testing 1</p>
+                <p>Technical testing 2</p>
+                <p>Technical testing 3 2015-09-01</p>
+            </nz-timeline-item>
+        </nz-timeline>
+    </div>
+
+</div>

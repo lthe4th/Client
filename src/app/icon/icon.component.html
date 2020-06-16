@@ -1,1 +1,30 @@
-<p>icon works!</p>
+<div class="container">
+    <div class="example">
+        <h2>Example</h2>
+        <div class="icons-list">
+            <i nz-icon [nzType]="'home'"></i>
+            <i nz-icon [nzType]="'setting'" [nzTheme]="'fill'"></i>
+            <i nz-icon [nzType]="'smile'" [nzTheme]="'outline'"></i>
+            <i nz-icon [nzType]="'sync'" [nzSpin]="true"></i>
+            <i nz-icon [nzType]="'smile'" [nzTheme]="'outline'" [nzRotate]="180"></i>
+            <!-- Loading with new API would spin automatically! -->
+            <i nz-icon [nzType]="'loading'"></i>
+        </div>
+        <h2>Basic usage</h2>
+        <p>
+            Use < i nz-icon>
+                < / i> to create an icon and set its type in the nzType prop. Specific the nzSpin prop to show spinning
+                    animation and the theme property to switch different themes.</p>
+
+        <div class="icons-list">
+            <i nz-icon [nzType]="'smile'" [nzTheme]="'twotone'"></i>
+            <i nz-icon [nzType]="'heart'" [nzTheme]="'twotone'" [nzTwotoneColor]="'#eb2f96'"></i>
+            <i nz-icon [nzType]="'check-circle'" [nzTheme]="'twotone'" [nzTwotoneColor]="'#52c41a'"></i>
+        </div>
+        <p>you can customize color with [nzTheme]="twotone" to render two tone</p>
+        <nz-divider></nz-divider>
+        <h4>If you're interesting you can take a look at the document of ant design's icon here</h4>
+        <a href="https://ng.ant.design/components/icon/en" nz-button>Document</a>
+    </div>
+
+</div>

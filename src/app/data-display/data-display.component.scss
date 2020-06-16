@@ -1,0 +1,110 @@
+.avatar{
+    nz-avatar {
+        margin-top: 16px;
+        margin-right: 16px;
+      }
+}
+.badge{
+    nz-badge {
+        margin-right: 20px;
+      }
+
+      .head-example {
+        width: 42px;
+        height: 42px;
+        border-radius: 4px;
+        background: #eee;
+        display: inline-block;
+        vertical-align: middle;
+      }
+}
+
+.card1{
+    p {
+        margin: 0;
+      }
+}
+
+.container{
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    .avatar,.badge,.card{
+        padding: 2rem;
+        width: 45%;
+        margin-left: 3%;
+        background-color: white;
+        height: max-content;
+    }
+}
+
+.carousel{
+    position: absolute;
+    top: 350px;
+    left: 70px;
+    width: 60%;
+    height:500px;
+    [nz-carousel-content] {
+        text-align: center;
+        height: 160px;
+        line-height: 160px;
+        background: #364d79;
+        color: #fff;
+        overflow: hidden;
+      }
+
+      h3 {
+        color: #fff;
+        margin-bottom: 0;
+      }
+}
+
+
+.container2{
+    padding: 1rem;
+    display: flex;
+    .collapse{
+        height: 500px !important;
+    }
+    .collapse,.comment,.Empty{
+        width: 45%;
+        padding: 2rem;
+        background-color: white;
+        margin-left: 1rem;
+    }
+    div{
+        height: max-content;
+        .count {
+            padding-left: 8px;
+            cursor: auto;
+          }
+    }
+}
+
+.container3{
+    padding: 1rem;
+    display: flex;
+    position: relative;
+   .Tabs{
+       margin-left: 100px;
+       height: 400px;
+       padding: 2rem;
+       background-color: white;
+       .tab1{
+           height: 100px;
+       }
+       .tab2{
+           max-width: 350px;
+       }
+   }
+   .timeline{
+       position: absolute;
+       background-color: white;
+       right: 100px;
+       top: -200px;
+       width: 900px;
+       height: max-content;
+       padding: 2rem;
+   }
+   
+}

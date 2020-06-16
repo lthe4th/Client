@@ -8,6 +8,9 @@ import { IconComponent } from './icon/icon.component';
 import { SliderComponent } from './slider/slider.component';
 import { ModalComponent } from './modal/modal.component';
 import { DrawerComponent } from './drawer/drawer.component';
+import { FormsComponent } from './forms/forms.component';
+import { TableComponent } from './table/table.component';
+import { DataDisplayComponent } from './data-display/data-display.component';
 
 
 const routes: Routes = [
@@ -20,6 +23,9 @@ const routes: Routes = [
   {path:"slider", component:SliderComponent},
   {path:"modal", component:ModalComponent},
   {path:"drawer", component:DrawerComponent},
+  {path:"forms", component:FormsComponent},
+  {path:"table", component:TableComponent},
+  {path:"data-display", component:DataDisplayComponent},
 ];
 
 @NgModule({

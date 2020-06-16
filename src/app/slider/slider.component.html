@@ -1,1 +1,47 @@
-<p>slider works!</p>
+<div class="container" nz-row>
+    <div nz-col nzSpan="11" class="example">
+        <div>
+            <h2>Examples</h2>
+            <nz-slider [(ngModel)]="value1" [nzDisabled]="disabled"></nz-slider>
+            <nz-slider nzRange [(ngModel)]="value2" [nzDisabled]="disabled"></nz-slider>
+            Disabled:
+            <nz-switch nzSize="small" [(ngModel)]="disabled"></nz-switch>
+        </div>
+        <nz-divider></nz-divider>
+        <div>
+            <div [ngStyle]="{ height: '300px' }">
+                <div [ngStyle]="style">
+                    <nz-slider nzVertical [ngModel]="30"></nz-slider>
+                </div>
+                <div [ngStyle]="style">
+                    <nz-slider nzVertical nzRange [nzStep]="10" [ngModel]="[20, 50]"></nz-slider>
+                </div>
+                <div [ngStyle]="style">
+                    <nz-slider nzVertical nzRange [nzMarks]="markss" [ngModel]="[26, 37]"></nz-slider>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div nz-col nzSpan="12" class="graduate">
+        <div>
+            <h2>Graduated slider</h2>
+            <h4>included=true</h4>
+            <nz-slider [nzMarks]="marks" [ngModel]="37"></nz-slider>
+            <nz-slider [nzMarks]="marks" nzIncluded nzRange [ngModel]="[26, 37]"></nz-slider>
+            <h4>included=false</h4>
+            <nz-slider [nzMarks]="marks" [nzIncluded]="false" [ngModel]="37"></nz-slider>
+            <h4>marks & step</h4>
+            <nz-slider [nzMarks]="marks" [nzStep]="10" [ngModel]="37"></nz-slider>
+            <h4>step=null || dots=true</h4>
+            <nz-slider [nzMarks]="marks" [nzStep]="null" [ngModel]="37"></nz-slider>
+            <nz-slider [nzMarks]="marks" nzDots [ngModel]="37"></nz-slider>
+            Change nzMarks dynamically: <button nz-button (click)="changeMarks()">Change nzMarks</button>
+        </div>
+    </div>
+    <div nz-col nzSpan="12">
+
+    </div>
+    <div nz-col nzSpan="12">
+
+    </div>
+</div>

@@ -1,0 +1,17 @@
+[nz-icon] {
+    margin-right: 6px;
+    font-size: 24px;
+  }
+
+.container{
+    padding: 1rem;
+    .example{
+        padding: 2rem;
+        width: 100%;
+        background-color: white;
+        height: 500px;
+        p{
+            font-size: 17px;
+        }
+    }
+}
